@@ -1,4 +1,22 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+nav{
+  background: $primary;
+  .navbar{
+    justify-content: space-between;
+    align-items: center;
+
+    ul{
+      gap: 64px;
+      padding: 25px 0;
+      a{
+        font-size: $font-m;
+        color: #ffffff;
+        display: block;
+      }
+      a:hover{
+        color: $complementary;
+      }
+    }
+
+    
+  }
 }
