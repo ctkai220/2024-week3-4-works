@@ -3,7 +3,12 @@ nav{
   .navbar{
     justify-content: space-between;
     align-items: center;
-
+    h1{
+      padding: 16px 0;
+      img{
+        width: 80px;
+      }
+    }
     ul{
       gap: 64px;
       padding: 25px 0;
@@ -16,7 +21,40 @@ nav{
         color: $complementary;
       }
     }
+  }
+  .nav-sm{
+    display: none;
+  }
+}
 
-    
+@media (max-width:576px) {
+  nav{
+    .navbar{
+      h1{
+        padding: 12px 0;
+      }
+      ul{
+        display: none;
+      }
+    }
+    .nav-sm{
+      display: block;
+      border: solid 1px #fff;
+      ul{
+        flex-wrap: wrap;
+        .card{
+          border: solid 1px #fff;
+          padding: 12px 0;
+        }
+        li{
+          a{
+            display: block;
+            color: #fff;
+            text-align: center;
+          }
+        }
+
+      }
+    }
   }
 }

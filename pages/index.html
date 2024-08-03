@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>index</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> -->
     
   </head>
   <body>
@@ -24,15 +24,15 @@
     <div class="professional">
       <div class="container">
         <h2 class="section-title">用專業的心，做專業的事</h2>
-        <ul class="d-flex">
-          <li>
+        <ul class="row">
+          <li class="col-3 col-md-6 col-sm-12">
             <div>
               <img src="../assets/images/home-section2-1.png" alt="單一價格">
               <h2>單一價格</h2>
               <p>無論任何度數皆不需追加費用即可擁有適合自己的薄型球面鏡片。</p>
             </div>            
           </li>
-          <li>
+          <li class="col-3 col-md-6 col-sm-12">
             <div>
               <img src="../assets/images/home-section2-2.png" alt="20 分鐘即可取件">
               <h2>20 分鐘即可取件</h2>
@@ -40,7 +40,7 @@
             </div>
             
           </li>
-          <li>
+          <li class="col-3 col-md-6 col-sm-12">
             <div>
               <img src="../assets/images/home-section2-3.png" alt="安心售後服務">
               <h2>安心售後服務</h2>
@@ -48,7 +48,7 @@
             </div>
             
           </li>
-          <li>
+          <li class="col-3 col-md-6 col-sm-12">
             <div>
               <img src="../assets/images/home-sectioin2-4.png" alt="關於鏡片">
               <h2>關於鏡片</h2>
@@ -62,20 +62,20 @@
     <div class="classic">
       <div class="container">
         <h2 class="section-title">經典系列鏡框</h2>
-        <ul class="d-flex">
-          <li>
+        <ul class="row">
+          <li class="col-4 col-md-6 col-sm-12">
             <div>
               <img src="../assets/images/home-section3-1.png" alt="OPTICAL">
               <h3>OPTICAL</h3>
             </div>
           </li>
-          <li>
+          <li class="col-4 col-md-6 col-sm-12">
             <div>
               <img src="../assets/images/home-section3-2.png" alt="SUNGLASSES">
               <h3>SUNGLASSES</h3>
             </div>
           </li>
-          <li>
+          <li class="col-4 col-md-6 col-sm-12">
             <div>
               <img src="../assets/images/home-section3-3.png" alt="FUNCTIONAL">
               <h3>FUNCTIONAL</h3>
@@ -90,13 +90,25 @@
         <ul class="d-flex">
           <li>
             <div>
-              <img src="../assets/images/home-section4-1.png" alt="DOUBLE A+">
+              <picture>
+                <!-- 當螢幕寬度少於600px時，替換圖片 -->
+                <source srcset="../assets/images/home-section4-1-sm.png" media="(max-width: 576px)">
+                <!-- 預設圖片，通常是桌面版本 -->
+                <img src="../assets/images/home-section4-1.png" alt="DOUBLE A+">
+              </picture>
+              <!-- <img src="../assets/images/home-section4-1.png" alt="DOUBLE A+"> -->
               <h3>DOUBLE A+</h3>
             </div>
           </li>
           <li>
             <div>
-              <img src="../assets/images/home-section4-2.png" alt="YOUTH">
+              <picture>
+                <!-- 當螢幕寬度少於600px時，替換圖片 -->
+                <source srcset="../assets/images/home-section4-2-sm.png" media="(max-width: 576px)">
+                <!-- 預設圖片，通常是桌面版本 -->
+                <img src="../assets/images/home-section4-2.png" alt="DOUBLE A+">
+              </picture>
+              <!-- <img src="../assets/images/home-section4-2.png" alt="YOUTH"> -->
               <h3>YOUTH</h3>
             </div>
           </li>
@@ -106,41 +118,41 @@
     <div class="recommend">
       <div class="container">
         <h2 class="section-title">顧客推薦</h2>
-        <ul class="d-flex">
-          <div class="recommend-inner d-flex">
+        <ul class="row">
+          <div class="recommend-inner col-3 col-md-6 col-sm-12">
             <li>
               <img src="../assets/images/home-section5-1.png" alt="customer-01">
-              <div class="info">
+              <div class="info d-flex">
                 <h4>Jessy</h4>
                 <p>眼鏡品質優良，下次還會想來這邊購買！</p>
                 <p class="date">2021/06/20</p>
               </div>
             </li>
           </div>
-          <div class="recommend-inner d-flex">
+          <div class="recommend-inner col-3 col-md-6 col-sm-12">
             <li>
               <img src="../assets/images/home-section5-2.png" alt="customer-02">
-              <div class="info">
+              <div class="info d-flex">
                 <h4>凱倫</h4>
                 <p>做工細緻、鏡架很輕盈，待久也不會覺得有負擔，推薦給大家！</p>
                 <p class="date">2021/04/18</p>
               </div>
             </li>
           </div>
-          <div class="recommend-inner d-flex">
+          <div class="recommend-inner col-3 col-md-6 col-sm-12">
             <li>
               <img src="../assets/images/home-section5-3.png" alt="customer-03">
-              <div class="info">
+              <div class="info d-flex">
                 <h4>悠悠</h4>
                 <p>謝謝客服人員的詳細回答，成功買到了喜歡的眼鏡，下次會再回購！</p>
                 <p class="date">2020/12/25</p>
               </div>
             </li>
           </div>
-          <div class="recommend-inner d-flex">
+          <div class="recommend-inner col-3 col-md-6 col-sm-12">
             <li>
               <img src="../assets/images/home-section5-4.png" alt="customer-04">
-              <div class="info">
+              <div class="info d-flex">
                 <h4>Kyuan</h4>
                 <p>服務很好，品質沒有任何問題，非常喜歡。</p>
                 <p class="date">2020/10/31</p>
@@ -158,11 +170,11 @@
             <legend>我們相當重視您的意見，若您有任何疑問，可先參考「常見問題」，若仍有任何問題，請填妥以下資料，我們會在近期與您聯繫。
             </legend>
             <label for="name">姓名</label>
-            <input type="text" id="name" placeholder="陳小明" name="name">
+            <input type="text" id="name" placeholder="陳小明" name="name" value="姓名">
             <label for="telphone">聯絡電話</label>
-            <input type="text" name="telphone" placeholder="0912-345-678" id="telphone">
+            <input type="text" name="telphone" placeholder="0912-345-678" id="telphone" value="聯絡電話">
             <label for="mail">電子郵件</label>
-            <input type="text" name="mail" placeholder="example@email.com" id="mail">
+            <input type="text" name="mail" placeholder="example@email.com" id="mail" value="電子郵件">
             <label for="content">意見反應</label>
             <textarea name="content" placeholder="請輸入您的意見" id="content"></textarea>
           </fieldset>
