@@ -1,12 +1,26 @@
 footer{
   background: $primary;
-  color: #ffffff;
   .footerbar{
     justify-content: space-between;
+    @include mobile-large{
+      padding-top: 24px;
+    }
     .footer-nav{
-      .footer-nav-bar{
+      padding-top: 48px;
+      @include mobile-large{
+        padding-top: 0;
+      }
+      &-bar{
         gap: 48px;
-        padding: 60px 0 36px;
+        padding-top: 16px;
+        padding-bottom: 36px;
+        @include pad{
+          padding-top: 8px;
+          padding-bottom: 36px;
+        }
+        @include mobile-large{
+          display: none;
+        }
         a{
           color: #ffffff;
         }
@@ -17,29 +31,75 @@ footer{
       .footer-info{
         li{
           font-size: $font-xl;
-          span{
-            font-size: $font-xl;
-            margin-right: 22px;
+          @include mobile-large{
+            font-size: $font-default;
           }
+          a{
+            font-weight: 300;
+            color: #ffffff;
+            span{
+              font-size: $font-xl;
+              margin-right: 22px;
+              vertical-align: middle;
+              @include pad{
+                margin-right: 10px;
+              }
+              @include mobile-large{
+                font-size: $font-l;
+                margin-right: 10px;
+              }
+            }
+          }
+          a:hover{
+            color: $complementary;
+          }
+          
         }
       }
     }
-    ul{
+    .Community{
       gap: 32px;
       padding-top: 48px;
+      @include pad{
+        gap: 16px;
+      }
+      @include mobile-large{
+        gap: 8px;
+        padding-top: 0px;
+      }
       img{
         width: 40px;
+        @include mobile-large{
+          width: 24px;
+        }
       }
     }
   }
+}  
+
   
   .copyright{
+    color: #ffffff;
     justify-content: space-between;
     padding: 32px 0;
     margin-top: 32px;
     border-top: 1px solid #fff;
+    @include mobile-large{
+      flex-direction: column;
+      padding: 16px 0;
+      margin-top: 24px;
+    }
+    p{
+      @include mobile-large{
+        padding-bottom: 8px;
+      }
+    }
     ul{
       gap: 48px;
+      @include mobile-large{
+        gap: 8px;
+        flex-direction: column;
+      }
       a{
         color: #ffffff;
       }
@@ -48,62 +108,11 @@ footer{
       }
     }
   }
-
-  @media (max-width:576px) {
-    .copyright{
-      flex-direction: column;
-      padding: 16px 0;
-      margin-top: 24px;
-      border-top: 1px solid #fff;
-      P{
-        padding-bottom: 8px;
-      }
-      ul{
-        gap: 8px;
-        flex-direction: column;
-        a{
-          color: #ffffff;
-        }
-        a:hover{
-          color: $complementary;
-        }
-      }
-    }
-  }
   
 
-
-}
-
-@media (max-width:576px) {
-  footer{
-    .footerbar{
-      .footer-nav{
-        .footer-nav-bar{
-          display: none;
-        }
-        .footer-info{
-          li{
-            font-size: $font-default;
-            span{
-              font-size: $font-default;
-              margin-right: 11px;
-            }
-          }
-        }
-      }
-      ul{
-        gap: 8px;
-        padding-top: 24px;
-        img{
-          width: 24px;
-        }
-      }
-    }
-    
-    
-    
   
   
-  }
-}
+
+
+
+

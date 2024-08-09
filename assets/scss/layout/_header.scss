@@ -1,10 +1,22 @@
 nav{
   background: $primary;
+  .container-sm{
+    @include mobile-large{
+      padding: 0;
+    }
+  }
   .navbar{
     justify-content: space-between;
     align-items: center;
+    @include mobile-large{
+      flex-direction: column;
+      align-items: start;
+    }
     h1{
       padding: 16px 0;
+      @include mobile-large{
+        padding: 12px 0 12px 15px;
+      }
       img{
         width: 80px;
       }
@@ -12,49 +24,55 @@ nav{
     ul{
       gap: 64px;
       padding: 25px 0;
-      a{
-        font-size: $font-m;
-        color: #ffffff;
-        display: block;
+      @include mobile-large{
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 0;
+        padding: 0;
       }
-      a:hover{
-        color: $complementary;
+      li{
+        @include mobile-large{
+          width: 50%;
+          text-align: center;
+          border: 1px solid #fff;
+        }
+        a{
+          font-size: $font-m;
+          color: #ffffff;
+          display: block;
+          padding: 4px;
+          @include mobile-large{
+            display: block;
+            font-size: $font-default;
+            padding: 12px 0;
+          }
+        }
+        a:hover{
+          color: $complementary;
+          }
       }
     }
   }
-  .nav-sm{
-    display: none;
-  }
+  
 }
 
 @media (max-width:576px) {
   nav{
+    
     .navbar{
-      h1{
-        padding: 12px 0;
-      }
-      ul{
-        display: none;
-      }
-    }
-    .nav-sm{
-      display: block;
-      border: solid 1px #fff;
-      ul{
-        flex-wrap: wrap;
-        .card{
-          border: solid 1px #fff;
-          padding: 12px 0;
-        }
+      
+      
+      ul{      
         li{
+          
           a{
             display: block;
-            color: #fff;
-            text-align: center;
+            font-size: $font-default;
+            padding: 12px 0;
           }
         }
-
       }
     }
+    
   }
 }

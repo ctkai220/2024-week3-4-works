@@ -3,12 +3,12 @@
   font-size: $font-xxl;
   font-weight: 600;
   text-align: center;
-}
-@media (max-width:576px) {
-  .section-title{
+  @include mobile{    
     font-size: $font-l;
+    }
   }
-}
+
+
 .row{
   display: flex;
   flex-wrap: wrap;
@@ -22,32 +22,44 @@
   width: 33%;
   padding: 0 12px;
 }
-@media (max-width:992px) {
-  .col-md-6{
-    width: 50%;
+.col-md-6{
+    @include pad{
+      width: 50%;
+    }
   }  
-}
-@media (max-width:576px) {
-  .col-sm-12{
-    width: 100%;
+ .col-sm-12{
+    @include mobile{
+      width: 100%;
+    }
   }
-  
-}
 .banner{
   background:url(/assets/images/home-header.png) no-repeat center;
   background-size: cover;
-  .banner-inner{
+  @include pad{
+    background:url(/assets/images/home-header-sm.png) no-repeat center;
+    background-size: cover;
+  }
+  &-inner{
     height:calc(100vh - 80px);
     color: $secondary;
     flex-direction: column;
     justify-content: center;
     align-items: end;
+    @include mobile{
+      height:calc(100vh - 176px);
+    }
     h2{
       font-size: $font-xl;
+      @include mobile{
+        font-size: $font-default;
+      }
     }
     P{
       font-size: $font-xxxl;
       font-weight: 800;
+      @include mobile{
+        font-size: $font-l;
+      }
     }
     a{
       font-size: $font-m;
@@ -61,29 +73,13 @@
     }
   }
 }
-@media (max-width:992px) {
-  .banner{
-    background:url(/assets/images/home-header-sm.png) no-repeat center;
-    background-size: cover;
-  }
-}
-@media (max-width:576px) {
-  .banner{
-    .banner-inner{
-      height:calc(100vh - 176px);
-      h2{
-        font-size: 16px;
-      }
-      P{
-        font-size: $font-l;
-      }
-    }
-  }
-}
+
 .professional{ 
   background: $complementary;
   padding: 80px 0;
-  
+  @include mobile{
+    padding: 40px 0;
+  }
   h2{
     color: $secondary;    
   }
@@ -91,6 +87,9 @@
   ul{
     text-align: center;
     margin-top: 32px;
+    @include mobile{
+      gap: 32px 0;
+    }
 
     li{
       img{
@@ -108,23 +107,26 @@
     }
   }
 }
-@media (max-width:576px) {
-  .professional{
-    padding: 40px 0;
-    ul{
-      gap: 32px 0;
-    }
-  }
-}
 
 .classic{
   padding: 80px 0;
+  @include mobile{
+    padding: 40px 0;
+  }
   h2{
     color: $secondary;
   }
   ul{
     margin-top: 48px;
     text-align: center;
+    @include pad{
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+    @include mobile{
+      margin-top: 24px;
+    }
     li{
       padding: 0;
       h3{
@@ -137,37 +139,38 @@
   }
   
 }
-@media (max-width:992px) {
-  .classic{
-    ul{
-      flex-direction: column;
-      align-items: center;
-      gap: 24px;
-    }
-  }
-}
-@media (max-width:576px) {
-  .classic{
-    padding: 40px 0;
-    ul{
-      margin-top: 24px;
-    }
-    
-  }
-}
 
 .joint-design{
   background: url(/assets/images/index-bg.png) no-repeat center;
   background-size: cover;
   padding: 80px 0;
+  @include pad{
+    background: url(/assets/images/index-bg-md.png) no-repeat center;
+    background-size: cover;
+  }
+  @include mobile{
+    background: url(/assets/images/index-bg-sm.png) no-repeat center;
+    background-size: cover;
+    padding: 40px 0;
+  }
   h2{
     color: #fff;
   }
   ul{
     text-align: center;
     margin-top: 48px;
+    @include pad{
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    @include mobile{
+      margin-top: 24px;
+    }
     li{
       width: 50%;
+      @include pad{
+        width: 100%;
+      }
       h3{
         font-size: $font-xxl;
         font-weight: 800;
@@ -178,42 +181,32 @@
     }
   }
 }
-@media (max-width:992px) {
-  .joint-design{
-    background: url(/assets/images/index-bg-md.png) no-repeat center;
-    background-size: cover;
-    ul{
-      flex-wrap: wrap;
-      gap: 24px;
-      li{
-        width: 100%;
-      }
-    }
-  }
-}
-@media (max-width:576px) {
-  .joint-design{
-    background: url(/assets/images/index-bg-sm.png) no-repeat center;
-    background-size: cover;
-    padding: 40px 0;
-    
-    ul{
-      margin-top: 24px;
-      li{
-        width: 100%;
-      }
-    }
-  }
-}
+
 
 .recommend{
   padding: 80px 0;
+  @include mobile{
+    padding: 40px 0;
+  }
   h2{
     color: $secondary;
   }
   ul{
     margin-top: 48px;
+    @include pad{
+      gap: 24px 0;
+    }
+    @include mobile{
+      margin-top: 24px;
+      gap: 16px;
+    }
     .recommend-inner{
+      @include pad{
+        width: 50%;
+      }
+      @include mobile{
+        width: 100%;
+      }
       li{
         border: 1px solid #DEE2E6;
         border-radius: 4px;
@@ -235,43 +228,36 @@
     }
   }
 }
-@media (max-width:992px) {
-  .recommend{
-    ul{
-      gap: 24px 0;
-      .recommend-inner{
-        width: 50%;
-      }
-    }
-  }
-}
-@media (max-width:576px) {
-  .recommend{
-    padding: 40px 0;
-    ul{
-      margin-top: 24px;
-      gap: 16px;
-      .recommend-inner{
-        width: 100%;
-      }
-    }
-  }
-}
+
+
 .contact{
   padding: 80px 0;
   background: $complementary;
-  .contact-inner{
+  @include mobile{
+    padding: 40px 0;
+  }
+  &-inner{
     h2{
       color: $secondary;
     }
     form{
       width: 49%;
       margin: 0 auto;
+      @include pad{
+        width: 75%;
+      }
+      @include mobile{
+        width: 100%;
+      }
+      
       fieldset{
         flex-direction: column;
         legend{
           font-size: $font-m;
           margin-bottom: 24px;
+          @include mobile{
+            font-size: $font-default;
+          }
         }
         input{
           padding: 8px;
@@ -288,6 +274,9 @@
       }
       .checkbox{
         margin: 16px 0 48px;
+        @include mobile{
+          margin-bottom: 24px;
+        }
       }
       .btn{
         text-align: center;
@@ -299,56 +288,18 @@
           border: none;
           cursor: pointer;
           margin: 0 auto;
+          @include pad{
+            width: 58%;
+          }
+          @include mobile{
+            width: 100%;
+            padding: 16px;
+          }
         }
         button:hover{
           background: $secondary;
         } 
-
       }
     }
   }
 }
-
-@media (max-width:992px) {
-  .contact{
-    .contact-inner{
-      form{
-        width: 75%;
-        .btn{
-          button{
-            width: 58%;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width:576px) {
-  .contact{
-    padding: 40px 0;
-    .contact-inner{
-      form{
-        width: 100%;
-        fieldset{
-          legend{
-            font-size: 16px;
-            margin-bottom: 24px;
-          }
-        }
-        .checkbox{
-          margin: 16px 0 24px;
-        }
-        .btn{
-          text-align: center;
-          button{
-            width: 100%;
-            padding: 16px;
-          }
-  
-        }
-      }
-    }
-  }
-}
-

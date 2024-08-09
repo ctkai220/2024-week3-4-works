@@ -1,5 +1,6 @@
 *,*:before,*:after{
     box-sizing:border-box;
+    // outline: 1px green solid;
   }
   body{
     font-family: "Noto Sans TC", "Roboto", sans-serif;
@@ -14,17 +15,24 @@
     max-width: 1320px;
     margin: 0 auto;
     padding: 0 12px;
-  }
-  @media (max-width:992px) {
-    .container{
+    @include pad{
       max-width: 720px;
     }
-  }  
-  @media (max-width:576px) {
-    .container{
+    @include mobile{
       max-width: 372px;
     }
   }
+  .container-md{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 12px;
+  }
+  .container-sm{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 12px;
+  }
+  
   .d-flex{
     display: flex;
   }
